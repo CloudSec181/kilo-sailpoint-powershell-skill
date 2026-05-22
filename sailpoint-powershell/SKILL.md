@@ -67,6 +67,19 @@ Load these on demand when the task touches their domain. They are organized so a
 - `references/sdk-vs-rest.md` — Decision tree for choosing between PSSailpoint SDK and `Invoke-RestMethod`, with a translation table showing equivalent calls in both styles.
 - `references/coding-standards.md` — The team's PowerShell style guide: naming, formatting, comments, headers, parameter conventions, output conventions. **Treat these as binding for any new or refactored code.**
 
+## Examples
+
+Reference these for canonical SDK calling patterns. They are sourced from the [official SailPoint PowerShell SDK](https://github.com/sailpoint-oss/powershell-sdk/tree/main/example).
+
+- `examples/paginate-accounts.ps1` — paginated list with `Invoke-Paginate` and server-side filter
+- `examples/paginate-search.ps1` — paginated search with `Invoke-PaginateSearch` and Elasticsearch DSL
+- `examples/patch-entitlement.ps1` — JSON Patch update via Beta API
+- `examples/get-accounts.ps1` — basic `Get-Accounts` with limit, offset, count, filters
+- `examples/search.ps1` — `Search-Post` with proxy config and `-WithHttpInfo`
+- `examples/create-transform.ps1` — creating a lookup transform from JSON
+
+These show the correct SDK calling syntax. For full production script structure (parameter blocks, error handling, retries, `-WhatIf`), combine these patterns with the template and coding standards.
+
 ## Templates
 
 - `templates/new-script.ps1` — Skeleton for a new script. Includes parameter block, error preference, auth check, logging setup, paginated call example, and structured error handling.

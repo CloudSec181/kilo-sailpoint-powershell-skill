@@ -82,6 +82,14 @@ sailpoint-powershell-skill/
     │   ├── patterns.md             ← pagination, errors, retries, search
     │   ├── sdk-vs-rest.md          ← decision tree + translation table
     │   └── coding-standards.md     ← team style guide (customize this)
+    ├── examples/                   ← gold-standard SDK examples
+    │   ├── README.md               ← index and sourcing info
+    │   ├── paginate-accounts.ps1   ← Invoke-Paginate with filters
+    │   ├── paginate-search.ps1     ← Invoke-PaginateSearch with ES DSL
+    │   ├── patch-entitlement.ps1   ← JSON Patch via Beta API
+    │   ├── get-accounts.ps1        ← basic list with params
+    │   ├── search.ps1              ← Search-Post with proxy
+    │   └── create-transform.ps1    ← transform creation from JSON
     └── templates/
         └── new-script.ps1          ← starter script with all conventions
 ```
